@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/langlearningplatform/static/css/main.073c9b0a.css",
-    "main.js": "/langlearningplatform/static/js/main.d547c097.js",
-    "static/media/logo.svg": "/langlearningplatform/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/langlearningplatform/index.html",
-    "main.073c9b0a.css.map": "/langlearningplatform/static/css/main.073c9b0a.css.map",
-    "main.d547c097.js.map": "/langlearningplatform/static/js/main.d547c097.js.map"
+    "main.css": "/langleraningplatform/static/css/main.073c9b0a.css",
+    "main.js": "/langleraningplatform/static/js/main.b0f523b0.js",
+    "static/media/logo.svg": "/langleraningplatform/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/langleraningplatform/index.html",
+    "main.073c9b0a.css.map": "/langleraningplatform/static/css/main.073c9b0a.css.map",
+    "main.b0f523b0.js.map": "/langleraningplatform/static/js/main.b0f523b0.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d547c097.js"
+    "static/js/main.b0f523b0.js"
   ]
 }
