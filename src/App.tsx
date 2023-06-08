@@ -2,7 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import {Button, Child} from './functionComponents';
+
+
+
 function App() {
+
+  const buttonName = "Button name";
+  var text1: string = "Text 1";
+  var text2: string = "Text 2";
+
+  var VarChildern = <div>Childern</div>;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +29,11 @@ function App() {
         >
           Learn React
         </a>
+
+        <div id="learning">
+          <Button buttonName={buttonName} />
+          <Child text1={text1} text2={text2} children={VarChildern} />
+        </div>
       </header>
     </div>
   );
