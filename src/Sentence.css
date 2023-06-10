@@ -1,0 +1,33 @@
+.planningBackground {
+    border: 1px solid black;
+    padding: 2em;
+
+    background-color: #dfdacd; /* This is the planning background: #f2f2f2; */
+}
+
+.sentence {
+    font-size: 1.25em;
+    border-radius: 30em;
+    padding: 0.5em;
+    background-color: white;
+    padding: 1em;
+}
+
+.sentence .normal {
+    color: gray;
+    cursor: pointer;
+}
+
+.sentence .highlighted {
+    border-radius: 1em;
+    /* Will need to find a proper way to align the text */
+    padding: 0.2em;
+    padding-bottom: 0.35em;
+    padding-left: 0.3em;
+    padding-right: 0em;
+
+
+    background-color: #0078d2;
+    color:#b3dd63;
+    cursor: pointer;
+}
