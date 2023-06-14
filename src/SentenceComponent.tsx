@@ -6,7 +6,7 @@
 // 4. Under the sentence, it displays option to translate selected part in context of the sentence.
 
 import { useState } from 'react';
-import './Sentence.css';
+import './css/Sentence.css';
 
 interface SentenceComponentProps {
     wordList: string[];
