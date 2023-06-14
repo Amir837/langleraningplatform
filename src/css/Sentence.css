@@ -1,6 +1,6 @@
 .planningBackground {
     border: 1px solid black;
-    padding: 2em;
+    display: inline-block;
 
     background-color: #dfdacd; /* This is the planning background: #f2f2f2; */
 }
@@ -11,6 +11,7 @@
     padding: 0.5em;
     background-color: white;
     padding: 1em;
+    width: fit-content;
 }
 
 .sentence .normal {
