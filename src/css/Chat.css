@@ -1,0 +1,20 @@
+.Chatik {
+    border: 4px dashed rgb(0, 26, 255);
+    border-radius: 10px;
+    margin: 400px;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    color:  hsl(7, 100%, 50%);
+    
+}
+
+.Answer {
+    text-align: right;
+    color:  hsl(145, 100%, 50%);
+}
+
+.Question{
+    text-align: left;
+    color:  hsl(268, 100%, 50%);
+}
