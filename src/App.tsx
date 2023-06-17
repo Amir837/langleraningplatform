@@ -12,6 +12,7 @@ import { error } from "console";
 function App() {
     const [firstQuestion, setFirstQuestion] = useState("");
     useEffect(() => {
+        //при выполнении определенных требований, сменить предложение 
         setFirstQuestion("First task");
     })
 
@@ -27,40 +28,52 @@ function App() {
         }
     };
 
-    const [messages, setMessages] = useState<string[]>([]);
+    interface Message {
+        text: string;
+        className: string;
+    }
+    const [messages, setMessages] = useState<Message[]>([]);
 
-    function addNewMessage(prevMessages:string[]){
-        setMessages(prevMessages => [...prevMessages, inputValue])
+    function addNewMessage(prevMessages:Message[]){
+        const newMessage: Message = {
+            text: inputValue,
+            className: 'Answer',
+        };
+        setMessages(prevMessages => [...prevMessages, newMessage])
         setInputValue('');
         addNewAnswer(messages);
     }
     
-    function addNewAnswer(prevMessages:string[]){
+    function addNewAnswer(prevMessages:Message[]){
         return fetch(`https://flashenglish.azurewebsites.net/api/gptconnectionenglishtenseteacher?sentence=${firstQuestion}&userInput=${inputValue}`)
         .then(response => response.json())
         .then(data => {
-            setMessages(prevMessages => [...prevMessages,(data.text)])
+            const newMessage: Message = {
+                text: data.text,
+                className: 'Question',
+            };
+            setMessages(prevMessages => [...prevMessages,newMessage])
         })
     }
 
     return (
         <div className="App">
             <div className="Chatik">
-                <h1></h1>
-                <h2>Чатик</h2> 
-                <div id="sentenceToTransform">{firstQuestion}</div>
+                <div className="Text1">Чатик</div> 
+                <div className="Task" id="sentenceToTransform">{firstQuestion}</div>
                 <div id="message">
                     {messages.map((message) => {
                         return(
-                            <div>
-                                {message}
+                            <div className={message.className}>
+                                {message.text}
                             </div>
                         );
                     })}
                 </div>
 
-                <div className = "textinfo"> 
+                <div> 
                     <input
+                        className = "my-input"
                         type="text"
                         placeholder="..."
                         value={inputValue}
