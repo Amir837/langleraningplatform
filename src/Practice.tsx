@@ -5,10 +5,10 @@ import { SentenceComponent } from './SentenceComponent';
 import './css/Practice.css';
 
 function Practice() {
-    const sentence = ["I", "am", "a", "sentence", "to", "transform"];
+    const sentence = "She goes to the store to buy earrings.";
 
-    const translateSelected = (selectedList: string[]) => {
-        console.log(selectedList);
+    const translateSelected = (selectedText: string) => {
+        fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`).then(res => res.json()).then(data => console.log(data));
     };
 
     return(
@@ -18,7 +18,7 @@ function Practice() {
             <div className="practiceChat">
                 <div className="sentenceToTransform">
                     <span>Transform next sentence: </span>
-                    <span><SentenceComponent translateSelected={translateSelected} wordList={sentence} originalLanguage="English" translatedLanguage='Russian'/></span>
+                    <span><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage='Russian'/></span>
                 </div>
             </div>
         </div>

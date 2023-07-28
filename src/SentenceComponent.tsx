@@ -9,7 +9,7 @@ import { useState } from 'react';
 import './css/Sentence.css';
 
 interface SentenceComponentProps {
-    translateSelected: (selectedList: string[]) => void;
+    translateSelected: (selectedText: string) => void;
 
     wordList: string[];
 
@@ -47,7 +47,7 @@ function SentenceComponent(props: SentenceComponentProps) {
     }
 
     const handleClick = () => {
-        props.translateSelected(props.wordList.slice(leftOfSelected, rightOfSelected))
+        props.translateSelected(props.wordList.slice(leftOfSelected, rightOfSelected).join(" "));
     }
 
     function SelectedPart(props: {selectedList: string[] }) {
