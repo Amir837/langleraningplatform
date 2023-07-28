@@ -1,0 +1,155 @@
+.practicePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aLotOfBooks{
+    width: 100%;
+    height: 200px;
+
+    background-image: url("https://assets.jwwb.nl/assets/templates/clean/books/img/heroimage2.jpg?enable-io=true&enable=upscale&crop=1920%2C576%2Cx0%2Cy0%2Csafe");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.practiceChat{
+    display: block;
+    width: 40%;
+    min-height: calc(100vh - 472px);
+    max-height: calc(100vh - 472px);
+    background-color: white;
+    margin: 30px;
+    border: 2px solid #e6e6e6;
+    border-radius: 40px;
+}
+
+/* настройки чата*/  
+.ChatBox {
+    min-height: calc(100vh - 560px);
+    max-height: calc(100vh - 472px);
+    overflow-y: auto;
+    position: relative;
+    max-width: 90%;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: #180e0e;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.BarBetween {
+    width: 100%;
+    min-width: 10px;
+    color: #180e0e;
+    border: 4px solid #ccc;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.my-input {
+    margin-left: 5%; 
+    margin-right: 5%;
+    width: 90%;
+    min-width: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 2%;
+    font-size: 24px;
+    border: 4px solid #ccc;
+    border-radius: 30px;
+}
+  
+.my-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+  
+.my-input::placeholder {
+    color: #999;
+}
+  
+.my-input:hover {
+    border-color: #999;
+}
+
+/* Transform this sentence from ... to*/  
+.Text1 {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* Выбор времени языка (Present Simple - Future Perfect Continuous) */
+.Tense {
+    text-align: center; 
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 30px;
+    color: #000000;
+}
+
+.SelectStyle {
+    text-align: center;
+    appearance: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #002fff;
+    border-radius: 200px;
+    background-color: #fffcf5;
+}
+
+.SelectStyle:hover {
+    color: #ff0000;
+}
+
+.SelectTextMain {
+    font-size: 40px;
+    color: #ff0000;
+}
+
+.SelectText {
+    font-size: 30px;
+    color: #ff0000;
+}
+
+.SelectStyle:focus {
+    color: #ff0000;
+    outline: none;
+}
+
+.SelectStyle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -5px;
+    border-left: 5px solid transparent; /* Левая стрелка */
+    border-right: 5px solid transparent; /* Правая стрелка */
+    border-top: 5px solid #000; /* Верхняя граница */
+    pointer-events: none; /* Позволяет щелкать на элементах за псевдоэлементом */
+}
+
+/* настройки чата (ответ/вопрос) */
+.Task {
+    color: #0084ff;
+    text-align: left;
+}
+
+.Answer {
+    text-align: right;
+    color:  hsl(145, 100%, 50%);
+    margin-top: 40px;
+}
+
+.Question {
+    max-width: 600px;
+    text-align: left;
+    color:  hsl(61, 100%, 21%);
+    font-size: 1.8rem;
+    margin-top: 40px;
+}

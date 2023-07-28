@@ -1,0 +1,119 @@
+/* Navigation element */
+a {
+    text-decoration: none;
+    color: #eb5055;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 10px;
+
+    font-family: "Merriweather","serif";
+    user-select: none;
+}
+
+/* Navigation header */
+h1 {
+    line-height: 1;
+    margin: 0;
+    color: #eb5055;
+    font-family: "Merriweather", "serif";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    display: inline;
+    outline: none;
+}
+
+/* Navigation Menu Bar */
+.menuBar {
+    width: 100%;
+    display: flex;
+}
+
+.menuBar::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    margin-right: 15px;
+    border-bottom: 2px solid rgba(235, 80, 85, 0.15);
+
+    position: relative;
+    transform: translate(0, -50%);
+}
+
+.menuBar::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    margin-left: 15px;
+    border-bottom: 2px solid rgba(235, 80, 85, 0.15);
+
+    position: relative;
+    transform: translate(0, -50%);
+}
+
+.menuUl {
+    display: flex;
+    justify-content: center;
+
+    font-size: 26px;
+}
+
+/* > uses to target direct children (it doesn't target grandchildren) */
+.menuUl>.menuUl-item {
+    margin: 0 5px;
+}
+
+.menuUl-link {
+    padding: 5px 13px;
+    text-decoration: none;
+    transition: 200ms ease;
+    color:#73716e;
+}
+
+.menuUl-link:hover {
+    color: #eb5055;
+}
+
+.menuUl-active-link {
+    box-shadow: -2px 0px 0px 0px #eb5055, 2px 0px 0px 0px #eb5055;
+    color: #eb5055;
+}
+/* брррррррррррррр бжжжж бввввввв*/
+.slide-out-text {
+    left: 88vw;
+    top: 26vh;
+    border: 2px dashed rgb(0, 26, 255);
+    border-radius: 10px;
+    position: absolute;
+    width: 20vh;
+    height: 10vh;
+    background-color: #ccc;
+    overflow: hidden;
+    transition: height 0.8s;
+}
+  
+.slide-out-text:hover {
+    height: 40vh;
+}
+  
+.slide-out-text:hover span {
+    opacity: 1;
+}
+  
+.slide-out-text span {
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #250000;
+    font-weight: bold;
+}
