@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+
+import { NavMenu } from './NavMenu';
+import { Practice } from './Practice';
+import { SentenceComponent } from './SentenceComponent';
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    1-st version is comming soon :)
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <NavMenu currentPage="Practice" />
+            <Practice />
         </div>
     );
 }
