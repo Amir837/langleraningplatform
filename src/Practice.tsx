@@ -10,8 +10,6 @@ function Practice() {
 
     const [autoScroll, setAutoScroll] = useState(0);
 
-    console.log(sentence);
-
     useEffect(() => {
         if (autoScroll < messages.length) {
             const container: HTMLElement | null = document.getElementById("message");
