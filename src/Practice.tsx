@@ -6,12 +6,11 @@ import { SentenceComponent } from './SentenceComponent';
 import './css/Practice.css';
 
 function Practice() {
-    window.onload = function() {
-        setSentence("She goes to the store to buy earrings.");
-    };
-    const [sentence, setSentence] = useState("");
+    const [sentence, setSentence] = useState("She goes to the store to buy earrings.");
 
     const [autoScroll, setAutoScroll] = useState(0);
+
+    console.log(sentence);
 
     useEffect(() => {
         if (autoScroll < messages.length) {
