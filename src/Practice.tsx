@@ -10,8 +10,6 @@ function Practice() {
 
     const [autoScroll, setAutoScroll] = useState(0);
 
-    console.log(sentence);
-
     useEffect(() => {
         if (autoScroll < messages.length) {
             const container: HTMLElement | null = document.getElementById("message");
@@ -139,18 +137,20 @@ function Practice() {
                 <div className="sentenceToTransform">
                     <span><div id="sentenceToTransform"><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage='Russian'/></div></span>
                 </div>
-                <div className="barBetween"></div>
+                <div className="barBetweenWhite"></div>
                 <div className="chatBox" id="message">
-                    {messages.map((message) => {
-                        return(
-                            <div className={message.className}>
-                                {message.text}
-                            </div>
-                        );
-                    })}
+                    <div className="TextContainer">
+                        {messages.map((message) => {
+                            return(
+                                <div className={message.className}>
+                                    {message.text}
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
-                <div className="barBetween"></div>
-                <div> 
+                <div className="barBetweenBlack"></div>
+                <div className="inputBox"> 
                     <input
                         className = "my-input"
                         type="text"
