@@ -63,6 +63,7 @@ function SentenceComponent(props: SentenceComponentProps) {
                 <button onClick={translateSelected}>Translate in context of the sentence</button>
 
                 {/* Will need to change it from button to any non-button surface*/}
+                <button onClick={clearSelection}>Clear selection</button>
             </div>
         </div>
     );
