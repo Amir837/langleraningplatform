@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(90deg, rgba(204,204,204,1) 0%, rgba(255,255,255,1) 50%, rgba(204,204,204,1) 100%);
+
 }
 
 .aLotOfBooks{
@@ -16,19 +18,22 @@
 .practiceChat{
     display: block;
     width: 40%;
-    min-height: calc(100vh - 472px);
-    max-height: calc(100vh - 472px);
+    min-height: calc(100vh - 432px);
+    max-height: calc(100vh - 432px);
     background-color: white;
     margin: 30px;
-    border: 2px solid #e6e6e6;
+    border: 5px solid #ccc;
     border-radius: 40px;
 }
 
 /* настройки чата*/  
 .chatBox {
-    min-height: calc(100vh - 635px);
-    max-height: calc(100vh - 635px);
+    min-height: calc(100vh - 598px);
+    max-height: calc(100vh - 598px);
     overflow-y: auto;
+}
+
+.TextContainer {
     position: relative;
     max-width: 90%;
     line-height: 1.5;
@@ -38,19 +43,29 @@
     margin-right: auto;
 }
 
-.barBetween {
+.inputBox {
+    background-color: #ccc;
+    border-bottom: 2px solid #ccc;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.barBetweenWhite {
     width: 100%;
     min-width: 10px;
-    color: #180e0e;
     border: 4px solid #ccc;
-    margin-bottom: 5px;
+}
+
+.barBetweenBlack {
+    width: 100%;
+    min-width: 10px;
+    border: 4px solid #ccc;
 }
 
 .my-input {
     margin-left: 1%;
     width: 98%;
     min-width: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     padding-left: 2%;
     font-size: 24px;
@@ -69,7 +84,7 @@
 }
   
 .my-input:hover {
-    border-color: #999;
+    border-color: #4CAF50;
 }
 
 /* Transform this sentence from ... to*/  
@@ -91,6 +106,7 @@
 }
 
 .selectStyle {
+    font-size: 25px;
     text-align: center;
     appearance: none;
     margin-left: 10px;
@@ -105,12 +121,12 @@
 }
 
 .selectTextMain {
-    font-size: 40px;
+    font-size: 35px;
     color: #ff0000;
 }
 
 .selectText {
-    font-size: 30px;
+    font-size: 25px;
     color: #ff0000;
 }
 
@@ -141,8 +157,7 @@
 .answer {
     text-align: right;
     color:  hsl(145, 100%, 50%);
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .question {
@@ -150,6 +165,5 @@
     text-align: left;
     color:  hsl(61, 100%, 21%);
     font-size: 1.8rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
