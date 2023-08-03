@@ -7,7 +7,6 @@
 .aLotOfBooks{
     width: 100%;
     height: 200px;
-
     background-image: url("https://assets.jwwb.nl/assets/templates/clean/books/img/heroimage2.jpg?enable-io=true&enable=upscale&crop=1920%2C576%2Cx0%2Cy0%2Csafe");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,11 +14,143 @@
 }
 
 .practiceChat{
-    width: 60%;
-    height: 50vh;
+    display: block;
+    width: 40%;
+    min-height: calc(100vh - 472px);
+    max-height: calc(100vh - 472px);
     background-color: white;
     margin: 30px;
-
     border: 2px solid #e6e6e6;
     border-radius: 40px;
+}
+
+/* настройки чата*/  
+.chatBox {
+    min-height: calc(100vh - 635px);
+    max-height: calc(100vh - 635px);
+    overflow-y: auto;
+    position: relative;
+    max-width: 90%;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: #180e0e;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.barBetween {
+    width: 100%;
+    min-width: 10px;
+    color: #180e0e;
+    border: 4px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.my-input {
+    margin-left: 1%;
+    width: 98%;
+    min-width: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 2%;
+    font-size: 24px;
+    border: 4px solid #ccc;
+    border-radius: 30px;
+}
+  
+.my-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+  
+.my-input::placeholder {
+    color: #999;
+}
+  
+.my-input:hover {
+    border-color: #999;
+}
+
+/* Transform this sentence from ... to*/  
+.text1 {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* Tense (Present Simple - Future Perfect Continuous) */
+.tense {
+    text-align: center; 
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 30px;
+    color: #000000;
+}
+
+.selectStyle {
+    text-align: center;
+    font-size: 25px;
+    appearance: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #002fff;
+    border-radius: 200px;
+    background-color: #fffcf5;
+}
+
+.selectStyle:hover {
+    color: #ff0000;
+}
+
+.selectTextMain {
+    font-size: 40px;
+    color: #ff0000;
+}
+
+.selectText {
+    font-size: 30px;
+    color: #ff0000;
+}
+
+.selectStyle:focus {
+    color: #ff0000;
+    outline: none;
+}
+
+.selectStyle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -5px;
+    border-left: 5px solid transparent; /* Левая стрелка */
+    border-right: 5px solid transparent; /* Правая стрелка */
+    border-top: 5px solid #000; /* Верхняя граница */
+    pointer-events: none; /* Позволяет щелкать на элементах за псевдоэлементом */
+}
+
+/* chat settings (start/answer/question) */
+.task {
+    color: #0084ff;
+    text-align: center;
+    font-size: 3.2vh;
+}
+
+.answer {
+    text-align: right;
+    color:  hsl(145, 100%, 50%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.question {
+    max-width: 600px;
+    text-align: left;
+    color:  hsl(61, 100%, 21%);
+    font-size: 1.8rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

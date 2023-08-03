@@ -9,6 +9,8 @@ import { useState } from 'react';
 import './css/Sentence.css';
 
 interface SentenceComponentProps {
+    translateSelected: (selectedText: string) => void;
+
     wordList: string[];
 
     // Will need to create a map for the next properties
@@ -17,52 +19,90 @@ interface SentenceComponentProps {
 }
 
 function SentenceComponent(props: SentenceComponentProps) {
-    const [leftIncludedPointerOfSelected, setLeftIncludedPointerOfSelected] = useState<number>(0);
-    const [rightNotIncludedPointerOfSelected, setRightNotIncludedPointerOfSelected] = useState<number>(0);
+    const [leftOfSelected, setLeftOfSelected] = useState<number>(0);
+    const [rightOfSelected, setRightOfSelected] = useState<number>(0);
+
+    if (leftOfSelected !== 0 && leftOfSelected === rightOfSelected) {
+        setLeftOfSelected(0);
+        setRightOfSelected(0);
+    }
 
     const selectWord = (wordIndex: number) => {
-        if (rightNotIncludedPointerOfSelected === wordIndex) {
-            setRightNotIncludedPointerOfSelected(wordIndex + 1);
+        if (rightOfSelected === wordIndex) {
+            setRightOfSelected(wordIndex + 1);
         }
-        else if (leftIncludedPointerOfSelected - 1 == wordIndex) {
-            setLeftIncludedPointerOfSelected(wordIndex);
+        else if (leftOfSelected - 1 == wordIndex) {
+            setLeftOfSelected(wordIndex);
         }
-        else if (rightNotIncludedPointerOfSelected - 1 == wordIndex) {
-            setRightNotIncludedPointerOfSelected(wordIndex);
+        else if (rightOfSelected - 1 == wordIndex) {
+            setRightOfSelected(wordIndex);
         }
-        else if (leftIncludedPointerOfSelected == wordIndex) {
-            setLeftIncludedPointerOfSelected(wordIndex + 1);
+        else if (leftOfSelected == wordIndex) {
+            setLeftOfSelected(wordIndex + 1);
         }
         else {
-            setLeftIncludedPointerOfSelected(wordIndex);
-            setRightNotIncludedPointerOfSelected(wordIndex + 1);
+            setLeftOfSelected(wordIndex);
+            setRightOfSelected(wordIndex + 1);
         }
     }
 
-    const translateSelected = () => {
-        console.log("I translted and reurned the result to the parrent component (maybe by using class) :). Turn on your imagination :)");
+    const handleClick = () => {
+        props.translateSelected(props.wordList.slice(leftOfSelected, rightOfSelected).join(" "));
     }
 
-    const clearSelection = () => {
-        setLeftIncludedPointerOfSelected(0);
-        setRightNotIncludedPointerOfSelected(0);
+    function SelectedPart(props: {selectedList: string[] }) {
+        return (
+            <span className="selected">
+                <span> </span>
+                {props.selectedList.map((word, index) => {
+                    if (props.selectedList.length > 0){
+                        return (
+                            <span
+                                key={leftOfSelected + index}
+                                onClick={selectWord.bind(null, (leftOfSelected + index))}
+                            >{word} </span>
+                        );
+                    }
+                })}
+            </span>
+        );
     }
 
     return (
-        <div className = "planningBackground">
-            <div className = "sentence">
-                {props.wordList.map((word, index) => {
-                    return (<span
-                        key={index}
-                        onClick={selectWord.bind(null, index)}
-                        className={(index >= leftIncludedPointerOfSelected && index < rightNotIncludedPointerOfSelected) ? "highlighted" : "normal" }
-                    >{word} </span>);
+        <div className="planningBackground">
+            <div className="sentence">
+                {props.wordList.slice(0, leftOfSelected).map((word, index) => {
+                    return (
+                        <span key={index}>
+                            <span
+                                onClick={selectWord.bind(null, index)}
+                                className={"normal"}
+                            >{word}</span>
+                            {index < (leftOfSelected - 1) ? <span> </span> : null}
+                        </span>
+                    );
+                })}
+
+                <SelectedPart
+                    selectedList={props.wordList.slice(leftOfSelected, rightOfSelected)}
+                />
+
+                {props.wordList.slice(rightOfSelected).map((word, index) => {
+                    return (
+                        <span key={rightOfSelected + index}>
+                            <span
+                                onClick={selectWord.bind(null, rightOfSelected + index)}
+                                className={"normal"}
+                            >{word}</span>
+                            {index < (props.wordList.length - 1) ? <span> </span> : null}
+                        </span>
+                    );
                 })}
             </div>
             <div>
-                <button onClick={translateSelected}>Translate in context of the sentence</button>
+                <button onClick={handleClick}>Translate in context of the sentence</button>
 
-                {/* Will need to change it from button to any non-button surface*/}
+                {/*Idea: Clear selected when usesr clicked somewhere else*/}
             </div>
         </div>
     );

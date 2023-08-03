@@ -3,7 +3,6 @@ import './css/App.css';
 
 import { NavMenu } from './NavMenu';
 import { Practice } from './Practice';
-import { SentenceComponent } from './SentenceComponent';
 
 function App() {
     return (
