@@ -17,6 +17,7 @@
 
 .practiceChat{
     display: block;
+    min-width: 600px;
     width: 40%;
     min-height: calc(100vh - 432px);
     max-height: calc(100vh - 432px);
@@ -93,7 +94,7 @@
     justify-content: center;
     text-align: center; 
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* Tense (Present Simple - Future Perfect Continuous) */
@@ -101,7 +102,7 @@
     text-align: center; 
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 30px;
+    font-size: 25px;
     color: #000000;
 }
 
@@ -121,7 +122,7 @@
 }
 
 .selectTextMain {
-    font-size: 35px;
+    font-size: 30px;
     color: #ff0000;
 }
 
@@ -145,6 +146,42 @@
     border-right: 5px solid transparent; /* Правая стрелка */
     border-top: 5px solid #000; /* Верхняя граница */
     pointer-events: none; /* Позволяет щелкать на элементах за псевдоэлементом */
+}
+
+@media (max-width: 1500px) {
+    .text1 {
+        font-size: 25px;
+    }
+    .tense {
+        font-size: 20px;
+    }
+    .selectStyle {
+        font-size: 20px;
+    }
+    .selectTextMain {
+        font-size: 25px;
+    }
+    .selectText {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .text1 {
+        font-size: 18px;
+    }
+    .tense {
+        font-size: 13px;
+    }
+    .selectStyle {
+        font-size: 13px;
+    }
+    .selectTextMain {
+        font-size: 18px;
+    }
+    .selectText {
+        font-size: 13px;
+    }
 }
 
 /* chat settings (start/answer/question) */
