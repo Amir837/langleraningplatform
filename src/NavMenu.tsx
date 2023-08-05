@@ -1,4 +1,6 @@
 /* Navigation menu as a functional component */
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './css/NavMenu.css';
 
@@ -8,18 +10,27 @@ interface NavMenuProps {
 }
 
 function NavMenu(props: NavMenuProps) {
+
     return (
         <nav>
             <header>
-                <h1><a href=".">{props.currentPage}</a></h1>
+                <h1><Link to="/">{props.currentPage}</Link></h1>
             </header>
 
             <div className="menuBar">
                 <ul className="menuUl">
-                    <li className={`menuUl-item ${props.currentPage=="Home" ? "menuUl-active-item" : ""}`}><a className="menuUl-link  temp-size" href="">Home</a></li>
-                    <li className={`menuUl-item ${props.currentPage=="Home" ? "menuUl-active-item" : ""}`}><a className="menuUl-link menuUl-active-link  temp-size" href="">Practice</a></li>
-                    <li className={`menuUl-item ${props.currentPage=="Home" ? "menuUl-active-item" : ""}`}><a className="menuUl-link  temp-size" href="">About</a></li>
-                    <li className={`menuUl-item ${props.currentPage=="Home" ? "menuUl-active-item" : ""}`}><a className="menuUl-link  temp-size" href="">Contact</a></li>
+                <li className={`menuUl-item ${props.currentPage === "Home" ? "menuUl-active-link" : "menuUl-active-item"}`}>
+                    <Link className="menuUl-link temp-size" to="/Home">Home</Link>
+                </li>
+                <li className={`menuUl-item ${props.currentPage === "Practice" ? "menuUl-active-link" : "menuUl-active-item"}`}>
+                    <Link className="menuUl-link temp-size" to="/Practice">Practice</Link>
+                </li>
+                <li className={`menuUl-item ${props.currentPage === "About" ? "menuUl-active-link" : "menuUl-active-item"}`}>
+                    <Link className="menuUl-link temp-size" to="/About">About</Link>
+                </li>
+                <li className={`menuUl-item ${props.currentPage === "Contact" ? "menuUl-active-link" : "menuUl-active-item"}`}>
+                    <Link className="menuUl-link temp-size" to="/Contact">Contact</Link>
+                </li>
                 </ul>
             </div>
         </nav>

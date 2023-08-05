@@ -31,13 +31,13 @@ function SentenceComponent(props: SentenceComponentProps) {
         if (rightOfSelected === wordIndex) {
             setRightOfSelected(wordIndex + 1);
         }
-        else if (leftOfSelected - 1 == wordIndex) {
+        else if (leftOfSelected - 1 === wordIndex) {
             setLeftOfSelected(wordIndex);
         }
-        else if (rightOfSelected - 1 == wordIndex) {
+        else if (rightOfSelected - 1 === wordIndex) {
             setRightOfSelected(wordIndex);
         }
-        else if (leftOfSelected == wordIndex) {
+        else if (leftOfSelected === wordIndex) {
             setLeftOfSelected(wordIndex + 1);
         }
         else {

@@ -110,11 +110,14 @@ function Practice() {
         };
         setMessages(prevMessages => [...prevMessages, newMessage])
         setInputValue('');
-        getTeacherFeadback(messages);
+        getTeacherFeedback(messages);
     }
-    
-    function getTeacherFeadback(prevMessages:Message[]){
-        return fetch(`https://flashenglish.azurewebsites.net/api/gptconnectionenglishtenseteacher?sentence=${sentence}&userInput=${inputValue}`)
+
+    var fromTense = "Present Simple";
+    var toTense = "Past Simple";
+
+    function getTeacherFeedback(prevMessages:Message[]){
+        return fetch(`https://flashenglish.azurewebsites.net/api/gptconnectionenglishtenseteacher?sentence=${sentence}&userInput=${inputValue}&fromTense=${fromTense}&toTense=${toTense}`)
         .then(response => response.json())
         .then(data => {
             const newMessage: Message = {
