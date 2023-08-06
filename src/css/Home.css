@@ -1,0 +1,91 @@
+.entrance {
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20%;
+    width: 20%;
+    min-height: 10%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enterBox {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.password {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.barBetweenLoginandPassword {
+    width: 100%;
+    min-width: 10px;
+    border: 4px solid #ccc;
+}
+
+.loginInput {
+    width: 100%;
+    min-width: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.loginInput:focus {
+    outline: none;
+    border-color: #46b5ff;
+    box-shadow: 0 0 15px #46b5ff;
+}
+
+.passwordInput {
+    width: 100%;
+    min-width: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.passwordInput:focus {
+    outline: none;
+    border-color: #46b5ff;
+    box-shadow: 0 0 15px #46b5ff;
+}
+
+.buttonEntrance {
+    width: 100%;
+    min-width: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #46b5ff;
+    border: 4px solid #46b5ff;
+    border-radius: 10px;
+}
+
+.buttonEntrance:hover {
+    background-color: #4172f8;
+    border: 4px solid #4172f8;
+    border-radius: 10px;
+}
+
+.buttonEntrance:focus {
+    background-color: #0044ff;
+    border: 4px solid #0044ff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0044ff;
+}

@@ -73,7 +73,7 @@
     border: 4px solid #ccc;
     border-radius: 30px;
 }
-  
+
 .my-input:focus {
     outline: none;
     border-color: #4CAF50;

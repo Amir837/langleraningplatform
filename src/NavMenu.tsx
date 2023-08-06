@@ -10,7 +10,8 @@ interface NavMenuProps {
 }
 
 function NavMenu(props: NavMenuProps) {
-    const f = "/" + `${props.currentPage}`;
+    var f = "/" + `${props.currentPage}`;
+    if (props.currentPage === "Home") f = "/";
     return (
         <nav>
             <header>
@@ -20,7 +21,7 @@ function NavMenu(props: NavMenuProps) {
             <div className="menuBar">
                 <ul className="menuUl">
                 <li className={`menuUl-item ${props.currentPage === "Home" ? "menuUl-active-link" : "menuUl-active-item"}`}>
-                    <Link className="menuUl-link temp-size" to="/Home">Home</Link>
+                    <Link className="menuUl-link temp-size" to="/">Home</Link>
                 </li>
                 <li className={`menuUl-item ${props.currentPage === "Practice" ? "menuUl-active-link" : "menuUl-active-item"}`}>
                     <Link className="menuUl-link temp-size" to="/Practice">Practice</Link>
