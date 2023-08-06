@@ -10,11 +10,11 @@ interface NavMenuProps {
 }
 
 function NavMenu(props: NavMenuProps) {
-
+    const f = "/" + `${props.currentPage}`;
     return (
         <nav>
             <header>
-                <h1><Link to="/">{props.currentPage}</Link></h1>
+                <h1><Link to={f}>{props.currentPage}</Link></h1>
             </header>
 
             <div className="menuBar">
