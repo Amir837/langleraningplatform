@@ -184,6 +184,26 @@
     }
 }
 
+@media (max-width: 600px) {
+    .text1 {
+        display: block;
+        font-size: 18px;
+        max-width: 200px;
+    }
+    .tense {
+        font-size: 13px;
+    }
+    .selectStyle {
+        font-size: 13px;
+    }
+    .selectTextMain {
+        font-size: 18px;
+    }
+    .selectText {
+        font-size: 13px;
+    }
+}
+
 /* chat settings (start/answer/question) */
 .task {
     color: #0084ff;

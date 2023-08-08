@@ -79,3 +79,18 @@ h1 {
     box-shadow: -2px 0px 0px 0px #eb5055, 2px 0px 0px 0px #eb5055;
     color: #eb5055;
 }
+
+@media (max-width: 600px) {
+    nav {
+        display: block;
+        gap: 5px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .menuUl {
+        display: block;
+        font-size: 20px;
+    }
+}

@@ -1,9 +1,10 @@
 import React, { ChangeEvent, useState } from 'react';
 import './css/Home.css';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+    const navigate = useNavigate();
 
     const [loginValue, setLoginValue] = useState("");
     const handleloginValueChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +17,8 @@ function Home() {
     };
     
     const handleClick = () => {
+        if (loginValue != "" && passwordValue != "")
+            navigate('/Practice');
     }
 
     return(
@@ -26,7 +29,7 @@ function Home() {
                     <input
                         className = "loginInput"
                         type="text"
-                        placeholder="..."
+                        placeholder=""
                         value={loginValue}
                         onChange={handleloginValueChange}
                     />
@@ -36,12 +39,12 @@ function Home() {
                     <input
                         className = "passwordInput"
                         type="text"
-                        placeholder="..."
+                        placeholder=""
                         value={passwordValue}
                         onChange={handlepasswordValueChange}
                     />
                 </div>
-                <Link to="/Practice"><button className="buttonEntrance" onClick={handleClick}>Log in</button></Link>
+                <button className="buttonEntrance" onClick={handleClick}>Log in</button>
             </div>
         </div>
     );

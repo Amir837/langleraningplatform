@@ -42,6 +42,7 @@ function AppContent() {
             </div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/langleraningplatform' element={<Home />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
