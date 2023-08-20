@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 
 import { NavMenu } from './NavMenu';
 
+import { TenseChat } from './TenseChat';
+
 import { Practice } from './Practice';
 import {Home} from './Home';
 import {About} from './About';
@@ -37,13 +39,15 @@ function AppContent() {
     
     return (
         <div>
+          {/*
             <div className="App">
                 <NavMenu currentPage={currentPage} />
             </div>
+          */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/langleraningplatform' element={<Home />} />
-          <Route path="/practice" element={<Practice />} />
+          <Route path="/practice" element={<TenseChat />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
