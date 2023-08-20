@@ -14,8 +14,7 @@
 }
 
 .practiceChat{
-    background: linear-gradient(rgb(177, 177, 177), rgba(255,255,255,1), rgb(177, 177, 177));
-    box-shadow: 0 0 30px #000000;
+    /*background: linear-gradient(rgb(177, 177, 177), rgba(255,255,255,1), rgb(177, 177, 177));*/
     display: block;
     min-width: 600px;
     width: 40%;

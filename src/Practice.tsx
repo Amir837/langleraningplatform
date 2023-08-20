@@ -135,7 +135,7 @@ function Practice() {
     return(
         <div className="practicePage">
             <div className="aLotOfBooks" />
-            <div className="text1">Transform this sentence from {languageTime1} to {languageTime2}</div>
+            <div className="text1">Transforming sentence from {languageTime1} to {languageTime2}</div>
             <div className="practiceChat">
                 <div className="sentenceToTransform">
                     <span><div id="sentenceToTransform"><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage='Russian'/></div></span>
