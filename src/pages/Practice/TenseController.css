@@ -1,0 +1,58 @@
+/* Constants (woulb be great to move to body) */
+.tenseController {
+    /*--textWarmColor: #ff0000;*/
+    --textWarmColor: orange;
+    --textDefaultColor: #000000;
+}
+
+.tenseController {
+    display: inline-block;
+    text-align: center; 
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    color: var(--textDefaultColor);
+}
+
+.selectStyle {
+    font-size: 25px;
+    text-align: center;
+    appearance: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--textWarmColor);
+    border-radius: 200px;
+    background-color: inherit;
+}
+
+.selectStyle:hover {
+    color: var(--textWarmColor);
+}
+
+.selectTextMain {
+    font-size: 30px;
+    color: var(--textWarmColor);
+}
+
+.selectText {
+    font-size: 25px;
+    color: var(--textWarmColor);
+}
+
+.selectStyle:focus {
+    /*color: var(--textWarmColor);*/
+    color: green;
+    outline: none;
+}
+
+.selectStyle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -5px;
+    border-left: 5px solid transparent; /* Левая стрелка */
+    border-right: 5px solid transparent; /* Правая стрелка */
+    border-top: 5px solid #000; /* Верхняя граница */
+    pointer-events: none; /* Позволяет щелкать на элементах за псевдоэлементом */
+}

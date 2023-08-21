@@ -1,7 +1,7 @@
 /* Practice page as a functional component */
-import React, {ChangeEvent, KeyboardEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from "react";
 
-import { SentenceComponent } from './SentenceComponent';
+import { SentenceComponent } from './pages/Practice/SentenceComponent';
 
 import './css/Practice.css';
 
@@ -30,29 +30,29 @@ function Practice() {
     const handleSelectChange1 = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setLanguageSet1(event.target.value);
     };
-      
-    const languageTime1 = 
+
+    const languageTime1 =
         <div className="tense">
-        <select className="selectStyle" name="languageTime1" onChange={handleSelectChange1} value={languageSet1}>
-        <optgroup className="selectTextMain" label="Present">
-            <option className="selectText" value="pr1">Present Simple</option>
-            <option className="selectText" value="pr2">Present Continuous</option>
-            <option className="selectText" value="pr3">Present Perfect</option>
-            <option className="selectText" value="pr4">Present Perfect Continuous</option>
-        </optgroup>
-        <optgroup className="selectTextMain" label="Past">
-            <option className="selectText" value="pa1">Past Simple</option>
-            <option className="selectText" value="pa2">Past Continuous</option>
-            <option className="selectText" value="pa3">Past Perfect</option>
-            <option className="selectText" value="pa4">Past Perfect Continuous</option>
-        </optgroup>
-        <optgroup className="selectTextMain" label="Future">
-            <option className="selectText" value="fu1">Future Simple</option>
-            <option className="selectText" value="fu2">Future Continuous</option>
-            <option className="selectText" value="fu3">Future Perfect</option>
-            <option className="selectText" value="fu4">Future Perfect Continuous</option>
-        </optgroup>
-        </select>
+            <select className="selectStyle" name="languageTime1" onChange={handleSelectChange1} value={languageSet1}>
+                <optgroup className="selectTextMain" label="Present">
+                    <option className="selectText" value="pr1">Present Simple</option>
+                    <option className="selectText" value="pr2">Present Continuous</option>
+                    <option className="selectText" value="pr3">Present Perfect</option>
+                    <option className="selectText" value="pr4">Present Perfect Continuous</option>
+                </optgroup>
+                <optgroup className="selectTextMain" label="Past">
+                    <option className="selectText" value="pa1">Past Simple</option>
+                    <option className="selectText" value="pa2">Past Continuous</option>
+                    <option className="selectText" value="pa3">Past Perfect</option>
+                    <option className="selectText" value="pa4">Past Perfect Continuous</option>
+                </optgroup>
+                <optgroup className="selectTextMain" label="Future">
+                    <option className="selectText" value="fu1">Future Simple</option>
+                    <option className="selectText" value="fu2">Future Continuous</option>
+                    <option className="selectText" value="fu3">Future Perfect</option>
+                    <option className="selectText" value="fu4">Future Perfect Continuous</option>
+                </optgroup>
+            </select>
         </div>;
 
     const [languageSet2, setLanguageSet2] = useState("");
@@ -60,30 +60,30 @@ function Practice() {
         setLanguageSet2(event.target.value);
     };
 
-    const languageTime2 = 
+    const languageTime2 =
         <div className="tense">
-        <select className="selectStyle" name="languageTime2" onChange={handleSelectChange2} value={languageSet2}>
-        <optgroup className="selectTextMain" label="Present">
-            <option className="selectText" value="pr1">Present Simple</option>
-            <option className="selectText" value="pr2">Present Continuous</option>
-            <option className="selectText" value="pr3">Present Perfect</option>
-            <option className="selectText" value="pr4">Present Perfect Continuous</option>
-        </optgroup>
-        <optgroup className="selectTextMain" label="Past">
-            <option className="selectText" value="pa1">Past Simple</option>
-            <option className="selectText" value="pa2">Past Continuous</option>
-            <option className="selectText" value="pa3">Past Perfect</option>
-            <option className="selectText" value="pa4">Past Perfect Continuous</option>
-        </optgroup>
-        <optgroup className="selectTextMain" label="Future">
-            <option className="selectText" value="fu1">Future Simple</option>
-            <option className="selectText" value="fu2">Future Continuous</option>
-            <option className="selectText" value="fu3">Future Perfect</option>
-            <option className="selectText" value="fu4">Future Perfect Continuous</option>
-        </optgroup>
-        </select>
+            <select className="selectStyle" name="languageTime2" onChange={handleSelectChange2} value={languageSet2}>
+                <optgroup className="selectTextMain" label="Present">
+                    <option className="selectText" value="pr1">Present Simple</option>
+                    <option className="selectText" value="pr2">Present Continuous</option>
+                    <option className="selectText" value="pr3">Present Perfect</option>
+                    <option className="selectText" value="pr4">Present Perfect Continuous</option>
+                </optgroup>
+                <optgroup className="selectTextMain" label="Past">
+                    <option className="selectText" value="pa1">Past Simple</option>
+                    <option className="selectText" value="pa2">Past Continuous</option>
+                    <option className="selectText" value="pa3">Past Perfect</option>
+                    <option className="selectText" value="pa4">Past Perfect Continuous</option>
+                </optgroup>
+                <optgroup className="selectTextMain" label="Future">
+                    <option className="selectText" value="fu1">Future Simple</option>
+                    <option className="selectText" value="fu2">Future Continuous</option>
+                    <option className="selectText" value="fu3">Future Perfect</option>
+                    <option className="selectText" value="fu4">Future Perfect Continuous</option>
+                </optgroup>
+            </select>
         </div>;
-    
+
     const [inputValue, setInputValue] = useState("");
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
@@ -102,8 +102,8 @@ function Practice() {
     }
     const [messages, setMessages] = useState<Message[]>([]);
 
-    function addNewMessage(prevMessages:Message[]){
-        
+    function addNewMessage(prevMessages: Message[]) {
+
         const newMessage: Message = {
             text: inputValue,
             className: 'answer',
@@ -116,35 +116,35 @@ function Practice() {
     var fromTense = "Present Simple";
     var toTense = "Past Simple";
 
-    function getTeacherFeedback(prevMessages:Message[]){
+    function getTeacherFeedback(prevMessages: Message[]) {
         return fetch(`https://flashenglish.azurewebsites.net/api/gptconnectionenglishtenseteacher?sentence=${sentence}&userInput=${inputValue}&fromTense=${fromTense}&toTense=${toTense}`)
-        .then(response => response.json())
-        .then(data => {
-            const newMessage: Message = {
-                text: data.text,
-                className: 'question',
-            };
-            setMessages(prevMessages => [...prevMessages,newMessage])
-        })
+            .then(response => response.json())
+            .then(data => {
+                const newMessage: Message = {
+                    text: data.text,
+                    className: 'question',
+                };
+                setMessages(prevMessages => [...prevMessages, newMessage])
+            })
     }
 
     const translateSelected = (selectedText: string) => {
         fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`).then(res => res.json()).then(data => console.log(data));
     };
 
-    return(
+    return (
         <div className="practicePage">
             <div className="aLotOfBooks" />
             <div className="text1">Transforming sentence from {languageTime1} to {languageTime2}</div>
             <div className="practiceChat">
                 <div className="sentenceToTransform">
-                    <span><div id="sentenceToTransform"><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage='Russian'/></div></span>
+                    <span><div id="sentenceToTransform"><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage='Russian' /></div></span>
                 </div>
                 <div className="barBetweenWhite"></div>
                 <div className="chatBox" id="message">
                     <div className="TextContainer">
                         {messages.map((message) => {
-                            return(
+                            return (
                                 <div className={message.className}>
                                     {message.text}
                                 </div>
@@ -153,9 +153,9 @@ function Practice() {
                     </div>
                 </div>
                 <div className="barBetweenBlack"></div>
-                <div className="inputBox"> 
+                <div className="inputBox">
                     <input
-                        className = "my-input"
+                        className="my-input"
                         type="text"
                         placeholder="..."
                         value={inputValue}

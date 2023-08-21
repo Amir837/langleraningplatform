@@ -1,0 +1,209 @@
+/* Constants */
+.tenseChatPage {
+    --background-color1: rgb(255, 252, 245);
+    --background-color2: rgb(250, 246, 223); /* Temp background for all answers */
+    --background-color3: white;
+    --background-color4: rgb(223, 255, 223); /* Green for right answer */
+    --background-color5: rgb(255, 233, 223); /* Orange for wrong answer or rgb(255, 240, 240);*/
+
+    /* Warm version */
+    --background1: rgb(255, 252, 245);
+    --background2: rgb(242, 239, 232); 
+
+    /* Good versions of warm collors
+    v1
+    --background1: rgb(255, 252, 245);
+    --background2: rgb(255, 240, 220); 
+    v2
+    --background1: rgb(255, 252, 245);
+    --background2: rgb(225, 222, 215); 
+    */
+
+
+    /* White/Gray version 
+    --background1: white;
+    --background2: rgb(247, 247, 248);
+    /**/
+
+    --border-color: rgba(217, 217, 227, .8);
+    
+}
+
+button {
+    background-color: rgb(255, 165, 0);
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 0 4px;
+    text-shadow: 1px 1px 10px black;
+    border-radius: 5px;
+}
+
+/* TenseChat */
+.tenseChatPage {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background1);
+}
+
+/* Left Bar */
+.leftBar {
+    width: 260px;
+    height: 100%;
+    min-height: 100vh;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.leftBar .navMenu {
+    width: 260px;
+    flex-grow: 1;
+    background-color: inherit;
+}
+
+.leftBar .tenseController {
+    width: 260px;
+    flex-grow: 1;
+    background-color: inherit;
+}
+
+.leftBar .something {
+    width: 260px;
+    flex-grow: 1;
+    background-color: inherit;
+}
+
+/* Chat */
+.chat {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.chat .sentenceTitleContainer {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: inherit;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat .sentenceTitleContainer .exerciseTitle {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.chat .sentenceTitleContainer .taskBlock {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.chat .taskBlock .attPointer {
+    /* font-family: system-ui; */
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: rgb(67, 68, 75)
+}
+
+.chat .taskBlock .sentence {
+    font-family: cursive;
+    background-color: orange;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Messages */
+.chat .messageHistory {
+    width: 100%;
+    flex-grow: 1;
+
+    background-color: inherit;
+}
+
+.chat .messageBox {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat .message {
+    width: 650px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.chat .right {
+    background-color: rgb(223, 255, 223);
+    color: black;
+    /*text-shadow:  -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;*/
+}
+
+.chat .wrong {
+    background-color: rgb(255, 233, 223);
+    color: black;
+    /*text-shadow:  -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;*/
+}
+
+.chat .v1 {
+    background-color: var(--background2);
+    color: #343541;
+}
+
+.chat .v2 {
+    background-color: inherit;
+    color: rgb(52, 53, 65)
+}
+
+.chat .userInput {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 30px;
+    background-color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--border-color);
+}
+
+.chat .userInput .input {
+    width: 650px;
+    padding: 10px;
+    font-size: 24px;
+    border: 4px solid #ccc;
+    border-radius: 30px;
+}
+
+.chat .userInput .input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}

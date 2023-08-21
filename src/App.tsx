@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 
 import { NavMenu } from './NavMenu';
 
-import { TenseChat } from './TenseChat';
+import { TenseChat } from './pages/Practice/TenseChat';
 
 import { Practice } from './Practice';
 import { Home } from './Home';
