@@ -22,6 +22,7 @@ enum EnglishTenses {
 function TenseController(props: { currentTense: EnglishTenses, handleTenseChange: (event: ChangeEvent<HTMLSelectElement>) => void; }) {
     return (
         <div className="tenseController">
+            <div className="pointer"></div>
             <select className="selectStyle" name="languageTime2" onChange={props.handleTenseChange} value={props.currentTense}>
                 <optgroup className="selectTextMain" label="Present">
                     <option className="selectText" value={EnglishTenses.PrsSim}>{EnglishTenses.PrsSim}</option>

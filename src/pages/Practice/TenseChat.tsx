@@ -81,9 +81,6 @@ function TenseChat() {
     return (
         <div className="tenseChatPage">
             <div className="leftBar">
-                <div className="navMenu">
-                    navMenu
-                </div>
 
                 <div className="tenseController">
 

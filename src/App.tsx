@@ -39,11 +39,7 @@ function AppContent() {
 
   return (
     <div className="App">
-      {/*
-            <div className="App">
-                <NavMenu currentPage={currentPage} />
-            </div>
-          */}
+      <NavMenu currentPage={currentPage} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/langleraningplatform' element={<Home />} />
