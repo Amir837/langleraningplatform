@@ -1,27 +1,20 @@
-.planningBackground {
-    border: 1px solid black;
-    display: inline-block;
-
-    background-color: #dfdacd; /* This is the planning background: #f2f2f2; */
-}
-
 .sentence {
-    font-size: 18px;
-    border-radius: 30em;
-    padding: 0.5em;
-    background-color: white;
-    padding: 1em;
+    font-family: cursive;
+    background-color: orange;
+    border-radius: 28px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+
+    padding: 10px;
     width: fit-content;
 }
 
 .sentence .normal {
-    color: gray;
     cursor: pointer;
 }
 
 .sentence .selected {
     border-radius: 1em;
-    /* Will need to find a proper way to align the text */
     line-height: 18px;
 
     background-color: #0078d2;

@@ -74,6 +74,10 @@ function TenseChat() {
             })
     }
 
+    const translateSelected = (selectedText: string) => {
+        fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`).then(res => res.json()).then(data => console.log(data));
+    };
+
     return (
         <div className="tenseChatPage">
             <div className="leftBar">
@@ -95,6 +99,7 @@ function TenseChat() {
                     <div className="exerciseTitle">Transform sentence from {FromTense} to {ToTense}</div>
                     <div className="taskBlock">
                         <div><span className="attPointer">The sentence:</span> <span className="sentence">&nbsp;{sentence}&nbsp;</span></div>
+                        <div><span className="attPointer">The sentence:</span> <SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage="Russian" /></div>
                         <button>Next sentence</button>
                     </div>
                 </div>
