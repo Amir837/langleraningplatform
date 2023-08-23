@@ -31,13 +31,13 @@ function SentenceComponent(props: SentenceComponentProps) {
         if (rightOfSelected === wordIndex) {
             setRightOfSelected(wordIndex + 1);
         }
-        else if (leftOfSelected - 1 === wordIndex) {
+        else if (leftOfSelected - 1 == wordIndex) {
             setLeftOfSelected(wordIndex);
         }
-        else if (rightOfSelected - 1 === wordIndex) {
+        else if (rightOfSelected - 1 == wordIndex) {
             setRightOfSelected(wordIndex);
         }
-        else if (leftOfSelected === wordIndex) {
+        else if (leftOfSelected == wordIndex) {
             setLeftOfSelected(wordIndex + 1);
         }
         else {
@@ -50,27 +50,34 @@ function SentenceComponent(props: SentenceComponentProps) {
         props.translateSelected(props.wordList.slice(leftOfSelected, rightOfSelected).join(" "));
     }
 
-    function SelectedPart(props: {selectedList: string[] }) {
+    function SelectedPart(props: { selectedList: string[], fstSpace: boolean, lstSpace: boolean }) {
+        if (props.selectedList.length === 0) {
+            return (<span className="selected"></span>);
+        }
+
         return (
             <span className="selected">
-                <span> </span>
+                <span className={props.fstSpace ? 'notSelectable' : ''}>&nbsp;</span>
                 {props.selectedList.map((word, index) => {
-                    if (props.selectedList.length > 0){
-                        return (
-                            <span
-                                key={leftOfSelected + index}
-                                onClick={selectWord.bind(null, (leftOfSelected + index))}
-                            >{word} </span>
-                        );
-                    }
+                    return (
+                        <span
+                            key={leftOfSelected + index}
+                            onClick={selectWord.bind(null, (leftOfSelected + index))}
+                        >
+                            {word}
+                            {index < (props.selectedList.length - 1) ? <span> </span> : null}
+                        </span>
+                    );
                 })}
+                <span className={props.lstSpace ? 'notSelectable' : ''}>&nbsp;</span>
             </span>
         );
     }
 
     return (
-        <div className="planningBackground">
+        <div className="sentenceContainer">
             <div className="sentence">
+                {(leftOfSelected > 0 || rightOfSelected === 0) && <span className='notSelectable'>&nbsp;</span>}
                 {props.wordList.slice(0, leftOfSelected).map((word, index) => {
                     return (
                         <span key={index}>
@@ -78,13 +85,15 @@ function SentenceComponent(props: SentenceComponentProps) {
                                 onClick={selectWord.bind(null, index)}
                                 className={"normal"}
                             >{word}</span>
-                            {index < (leftOfSelected - 1) ? <span> </span> : null}
+                            {index < (leftOfSelected - 1) ? <span>&nbsp;</span> : null}
                         </span>
                     );
                 })}
 
                 <SelectedPart
                     selectedList={props.wordList.slice(leftOfSelected, rightOfSelected)}
+                    fstSpace={true}
+                    lstSpace={true}
                 />
 
                 {props.wordList.slice(rightOfSelected).map((word, index) => {
@@ -94,10 +103,12 @@ function SentenceComponent(props: SentenceComponentProps) {
                                 onClick={selectWord.bind(null, rightOfSelected + index)}
                                 className={"normal"}
                             >{word}</span>
-                            {index < (props.wordList.length - 1) ? <span> </span> : null}
+                            {rightOfSelected + index < (props.wordList.length - 1) ? <span>&nbsp;</span> : null}
                         </span>
                     );
                 })}
+
+                {rightOfSelected < props.wordList.length && <span className='notSelectable'>&nbsp;</span>}
             </div>
             <div>
                 <button onClick={handleClick}>Translate in context of the sentence</button>
