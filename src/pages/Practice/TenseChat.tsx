@@ -32,6 +32,12 @@ function TenseChat() {
     const FromTense = <TenseController currentTense={fromTense} handleTenseChange={handleFromTenseChange} />;
     const ToTense = <TenseController currentTense={toTense} handleTenseChange={handleToTenseChange} />;
 
+    // Next sentence
+    const nextSentence = () => {
+        setSentence("He has been working for 10 hours.");
+        /* Will need to create a new Az Function to generate a new sentence in fromTense */
+    }
+
     // User input
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
