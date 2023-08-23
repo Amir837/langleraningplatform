@@ -40,8 +40,7 @@
 }
 
 .selectStyle:focus {
-    /*color: var(--textWarmColor);*/
-    color: green;
+    color: var(--textWarmColor);
     outline: none;
 }
 
