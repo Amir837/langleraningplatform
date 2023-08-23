@@ -21,3 +21,14 @@
     color:#b3dd63;
     cursor: pointer;
 }
+
+.notSelectable {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.translateInContextButton {
+
+}
