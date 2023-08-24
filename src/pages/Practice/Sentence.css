@@ -17,8 +17,8 @@
     border-radius: 1em;
     line-height: 18px;
 
-    background-color: #0078d2;
-    color:#b3dd63;
+    background-color: rgb(0, 120, 210);
+    color:rgb(120, 210, 0);
     cursor: pointer;
 }
 

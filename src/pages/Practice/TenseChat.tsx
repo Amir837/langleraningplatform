@@ -98,7 +98,7 @@ function TenseChat() {
                 <div className="sentenceTitleContainer">
                     <div className="exerciseTitle">Transform sentence from {FromTense} to {ToTense}</div>
                     <div className="taskBlock">
-                        <div><span className="attPointer">The sentence:</span> <span className="sentence">&nbsp;{sentence}&nbsp;</span></div>
+                        {/* <div><span className="attPointer">The sentence:</span> <span className="sentence">&nbsp;{sentence}&nbsp;</span></div> */}
                         <div><span className="attPointer">The sentence:</span> <SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage="Russian" /></div>
                         <button>Next sentence</button>
                     </div>
