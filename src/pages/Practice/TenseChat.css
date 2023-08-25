@@ -120,8 +120,10 @@ button {
 
 .chat .taskBlock .attPointer {
     /* font-family: system-ui; */
+    display: inline-block;
+    
     font-family: Brush Script MT, Brush Script Std, cursive;
-    color: rgb(67, 68, 75)
+    color: rgb(67, 68, 75);
 }
 
 /* Messages */
