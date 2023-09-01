@@ -14,6 +14,10 @@
     background-color: rgb(255, 252, 245);
 }
 
+button {
+    text-shadow: none;
+}
+
 .feedback-form-box {
     background-color: #fffcf5;
     border: 1px solid #ffffff;
