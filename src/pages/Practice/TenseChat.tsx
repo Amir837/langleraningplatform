@@ -80,17 +80,6 @@ function TenseChat() {
 
     return (
         <div className="tenseChatPage">
-            <div className="leftBar">
-
-                <div className="tenseController">
-
-                </div>
-
-                <div className="something">
-
-                </div>
-            </div>
-
             <div className="chat">
                 <div className="sentenceTitleContainer">
                     <div className="exerciseTitle">Transform sentence from {FromTense} to {ToTense}</div>

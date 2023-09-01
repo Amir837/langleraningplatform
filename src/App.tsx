@@ -10,7 +10,7 @@ import { TenseChat } from './pages/Practice/TenseChat';
 import { Practice } from './Practice';
 import { Home } from './Home';
 import { About } from './About';
-import { Contact } from './Contact';
+import { Contact } from './pages/Contact/Contact';
 
 function App() {
   return (
