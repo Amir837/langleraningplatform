@@ -74,6 +74,8 @@ function SentenceComponent(props: SentenceComponentProps) {
         );
     }
 
+    let s: string = (leftOfSelected < rightOfSelected) ? "selected" : "";
+
     return (
         <div className="sentenceComponentContainer">
             <div className="alignCenter">
@@ -111,9 +113,12 @@ function SentenceComponent(props: SentenceComponentProps) {
 
                     {rightOfSelected < props.wordList.length && <span className='notSelectable'>&nbsp;</span>}
                 </div>
-                <div className="translateInContextButton">
-                    {leftOfSelected < rightOfSelected && 
-                    <button onClick={handleClick}>Translate in context of the sentence</button>}
+
+                <div className="translateInContextButtonContainer">
+                    <label>
+                        {/*Add label with a request to select the part of sentence to translate */}
+                        <button className={leftOfSelected < rightOfSelected ? "" : "inactiveButton"} onClick={handleClick}>Translate in context of the sentence</button>
+                    </label>
                 </div>
             </div>
         </div>

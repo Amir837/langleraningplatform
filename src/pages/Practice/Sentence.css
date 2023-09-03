@@ -28,7 +28,27 @@
     cursor: pointer;
 }
 
-.translateInContextButton {
+.translateInContextButtonContainer {
     height: 32px;
-    
 }
+
+.translateInContextButtonContainer button {
+    background-color: rgb(255, 165, 0);
+    padding: 2px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.translateInContextButtonContainer button:hover {
+    border: 1px solid black;
+    text-shadow: 1px 1px 1px black;
+}
+
+.translateInContextButtonContainer .inactiveButton {
+    background-color: rgba(255, 166, 0, 0.555);
+}
+
