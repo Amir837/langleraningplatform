@@ -1,3 +1,18 @@
+/* Variables */
+
+body {
+    --liteGreen1: rgb(223, 255, 223); /* Green for right answer */
+    --liteRed1: rgb(255, 233, 223); /* Orange for wrong answer or rgb(255, 240, 240);*/
+
+    --background1: rgb(255, 252, 245);
+    --background2: rgb(242, 239, 232); 
+
+    --border-color: rgba(217, 217, 227, .8);
+
+    --textWarmColor: orange;
+    --textDefaultColor: #000000;
+}
+
 body {
     background-color: #fffcf5;
     height: auto;
@@ -24,4 +39,8 @@ button {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+.noPadding {
+    padding: 0;
 }

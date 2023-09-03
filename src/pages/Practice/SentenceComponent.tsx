@@ -52,7 +52,7 @@ function SentenceComponent(props: SentenceComponentProps) {
 
     function SelectedPart(props: { selectedList: string[], fstSpace: boolean, lstSpace: boolean }) {
         if (props.selectedList.length === 0) {
-            return (<span className="selected"></span>);
+            return (<span></span>);
         }
 
         return (

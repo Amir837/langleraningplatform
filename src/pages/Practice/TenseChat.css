@@ -1,34 +1,3 @@
-/* Constants */
-.tenseChatPage {
-    --background-color1: rgb(255, 252, 245);
-    --background-color2: rgb(250, 246, 223); /* Temp background for all answers */
-    --background-color3: white;
-    --background-color4: rgb(223, 255, 223); /* Green for right answer */
-    --background-color5: rgb(255, 233, 223); /* Orange for wrong answer or rgb(255, 240, 240);*/
-
-    /* Warm version */
-    --background1: rgb(255, 252, 245);
-    --background2: rgb(242, 239, 232); 
-
-    /* Good versions of warm collors
-    v1
-    --background1: rgb(255, 252, 245);
-    --background2: rgb(255, 240, 220); 
-    v2
-    --background1: rgb(255, 252, 245);
-    --background2: rgb(225, 222, 215); 
-    */
-
-
-    /* White/Gray version 
-    --background1: white;
-    --background2: rgb(247, 247, 248);
-    /**/
-
-    --border-color: rgba(217, 217, 227, .8);
-    
-}
-
 /*
 button {
     background-color: rgb(255, 165, 0);
