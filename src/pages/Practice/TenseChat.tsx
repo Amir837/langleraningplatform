@@ -1,5 +1,5 @@
 /* Tense Chat */
-import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, KeyboardEvent, useEffect, useState} from "react";
 
 import { SentenceComponent } from "./SentenceComponent";
 import { TenseController, EnglishTenses } from './TenseController';
@@ -12,7 +12,9 @@ function TenseChat() {
         className: string;
     }
 
-    const [sentence, setSentence] = useState("She goes to the store to buy earrings.");
+    const fstSentence = "She goes to the store to buy earrings.";
+
+    const [sentence, setSentence] = useState(fstSentence);
     const [fromTense, setFromTense] = useState<EnglishTenses>(EnglishTenses.PrsSim);
     const [toTense, setToTense] = useState<EnglishTenses>(EnglishTenses.PstSim);
     const [inputValue, setInputValue] = useState("");
@@ -33,8 +35,9 @@ function TenseChat() {
     const ToTense = <TenseController currentTense={toTense} handleTenseChange={handleToTenseChange} />;
 
     // Next sentence
+    const nextSent = sentence === fstSentence ? "He has been working for 10 hours." : fstSentence;
     const nextSentence = () => {
-        setSentence("He has been working for 10 hours.");
+        setSentence(nextSent);
         /* Will need to create a new Az Function to generate a new sentence in fromTense */
     }
 
@@ -100,7 +103,7 @@ function TenseChat() {
                     <div className="taskBlock">
                         {/* <div><span className="attPointer">The sentence:</span> <span className="sentence">&nbsp;{sentence}&nbsp;</span></div> */}
                         <div><div className="attPointer notSelectable">The sentence:</div><span className="notSelectable">&nbsp;</span><SentenceComponent translateSelected={translateSelected} wordList={sentence.split(" ")} originalLanguage="English" translatedLanguage="Russian" /></div>
-                        <button>Next sentence</button>
+                        <button onClick={nextSentence}>Next sentence</button>
                     </div>
                 </div>
 
