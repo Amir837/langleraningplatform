@@ -1,11 +1,13 @@
-/* Constants (woulb be great to move to body) */
 .tenseController {
-    /*--textWarmColor: #ff0000;*/
-    --textWarmColor: orange;
-    --textDefaultColor: #000000;
+    display: inline-block;
+    text-align: center; 
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    color: var(--textDefaultColor);
 }
 
-.pointer {
+.tenseController .pointer {
     content: "";
     position: relative;
     width: 0;
@@ -16,15 +18,6 @@
     margin-left: 320px;
     top: 22px;
     pointer-events: none;
-}
-
-.tenseController {
-    display: inline-block;
-    text-align: center; 
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 25px;
-    color: var(--textDefaultColor);
 }
 
 .selectStyle {

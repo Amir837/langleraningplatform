@@ -1,34 +1,85 @@
-.sentence {
+.sentenceComponentContainer {
+    display: inline-block;
+}
+
+.sentenceComponentContainer .alignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sentenceComponentContainer .sentence {
     font-family: cursive;
     background-color: orange;
     border-radius: 28px;
     color: white;
     text-shadow: 2px 2px 5px black;
 
-    padding: 10px;
+    padding: 5px;
     width: fit-content;
-}
-
-.sentence .normal {
     cursor: pointer;
 }
 
-.sentence .selected {
-    border-radius: 1em;
-    line-height: 18px;
+.sentenceComponentContainer .sentence .normal {
+    transition: all 0.1s ease;
+}
 
-    background-color: #0078d2;
-    color:#b3dd63;
+.normal:hover {
+    color: rgb(250, 255, 255);
+    text-shadow: 2px 2px 2px black;
+}
+
+.sentenceComponentContainer .sentence .selected {
+    /* green: rgb(120, 210, 0); */
+    border-radius: 28px;
+    padding: 2px 0;
+    cursor: pointer;
+
+    /* Hight Contrast black light-green
+    background-color: rgba(120, 240, 0, 0.753);
+    color:black;
+    text-shadow: 2px 2px 2px green;
+    /* */
+
+    /* without background */
+    color: rgb(5, 5, 5);
+    text-shadow: 2px 2px 3px white;
+    /* */
+
+    /* Small change of background 
+    background-color: rgb(255, 190, 110);
+    color: rgb(5, 5, 5);
+    text-shadow: 1px 1px 1px white;
+    /* */
+
+    /* Peachful background 
+    background-color: rgb(235, 206, 135);
+    background-color: peachpuff;
+    text-shadow: 2px 2px 2px black;
+    /* */
+}
+
+.translateInContextButtonContainer {
+    height: 32px;
+}
+
+.translateInContextButtonContainer button {
+    background-color: rgba(255, 166, 0, 0.57);
+    padding: 2px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.notSelectable {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+.translateInContextButtonContainer button:hover {
+    border: 1px solid black;
+    text-shadow: 1px 1px 1px black;
 }
 
-.translateInContextButton {
-
+.translateInContextButtonContainer .inactiveButton {
+    background-color: rgba(255, 166, 0, 0.2);
+    text-shadow: 1px 1px 1px gray;
 }
