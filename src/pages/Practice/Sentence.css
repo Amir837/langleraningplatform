@@ -20,17 +20,43 @@
     cursor: pointer;
 }
 
+.sentenceComponentContainer .sentence .normal {
+    transition: all 0.1s ease;
+}
+
 .normal:hover {
-    text-shadow: 2px 2px 1px black;
+    color: rgb(250, 255, 255);
+    text-shadow: 2px 2px 2px black;
 }
 
 .sentenceComponentContainer .sentence .selected {
+    /* green: rgb(120, 210, 0); */
     border-radius: 28px;
     padding: 2px 0;
-    background-color: rgb(0, 120, 210);
-    color:rgb(120, 210, 0);
     cursor: pointer;
-    text-shadow: 2px 2px 1px black;
+
+    /* Hight Contrast black light-green
+    background-color: rgba(120, 240, 0, 0.753);
+    color:black;
+    text-shadow: 2px 2px 2px green;
+    /* */
+
+    /* without background */
+    color: rgb(5, 5, 5);
+    text-shadow: 2px 2px 3px white;
+    /* */
+
+    /* Small change of background 
+    background-color: rgb(255, 190, 110);
+    color: rgb(5, 5, 5);
+    text-shadow: 1px 1px 1px white;
+    /* */
+
+    /* Peachful background 
+    background-color: rgb(235, 206, 135);
+    background-color: peachpuff;
+    text-shadow: 2px 2px 2px black;
+    /* */
 }
 
 .translateInContextButtonContainer {
@@ -57,4 +83,3 @@
     background-color: rgba(255, 166, 0, 0.2);
     text-shadow: 1px 1px 1px gray;
 }
-
