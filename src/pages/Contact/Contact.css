@@ -93,12 +93,12 @@ button {
 }
 
 .feedback-form .emoji-box .emoji-button-pressed { 
-    background-color: var(--blue5);
+    background-color: rgb(255, 243, 210);
     border: 3px solid var(--blue1);
 }
 
 .feedback-form .emoji-box .emoji-button:active {
-    background-color: var(--blue5);
+    background-color: rgb(255, 243, 210);
     border: 3px solid var(--blue1);
 }
 
