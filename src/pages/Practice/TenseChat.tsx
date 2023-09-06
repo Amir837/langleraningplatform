@@ -64,7 +64,7 @@ function TenseChat() {
         getTeacherFeedback(messages);
     }
 
-    // Getting feeadback
+    // Getting feeadback on sentence transformation
     function getTeacherFeedback(prevMessages: Message[]) {
         return fetch(`https://flashenglish.azurewebsites.net/api/gptconnectionenglishtenseteacher?sentence=${sentence}&userInput=${inputValue}&fromTense=${fromTense}&toTense=${toTense}`)
             .then(response => response.json())
@@ -78,7 +78,15 @@ function TenseChat() {
     }
 
     const translateSelected = (selectedText: string) => {
-        fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`).then(res => res.json()).then(data => console.log(data));
+        fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`)
+        .then(res => res.json())
+        .then(data => {
+            const newMessage: Message = {
+                text: "It can be translated as: " + data.text,
+                className: 'v2',
+            };
+            setMessages(prevMessages => [...prevMessages, newMessage])
+        })
     };
 
     return (
