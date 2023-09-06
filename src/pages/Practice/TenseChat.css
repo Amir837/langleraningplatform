@@ -21,35 +21,6 @@ button {
     background-color: var(--background1);
 }
 
-/* Left Bar */
-.leftBar {
-    width: 260px;
-    height: 100%;
-    min-height: 100vh;
-    border: 2px solid black;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.leftBar .navMenu {
-    width: 260px;
-    flex-grow: 1;
-    background-color: inherit;
-}
-
-.leftBar .tenseController {
-    width: 260px;
-    flex-grow: 1;
-    background-color: inherit;
-}
-
-.leftBar .something {
-    width: 260px;
-    flex-grow: 1;
-    background-color: inherit;
-}
-
 /* Chat */
 .chat {
     width: 100%;

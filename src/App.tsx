@@ -10,7 +10,7 @@ import { TenseChat } from './pages/Practice/TenseChat';
 import { Practice } from './Practice';
 import { Home } from './Home';
 import { About } from './About';
-import { Contact } from './Contact';
+import { Contact } from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -39,11 +39,7 @@ function AppContent() {
 
   return (
     <div className="App">
-      {/*
-            <div className="App">
-                <NavMenu currentPage={currentPage} />
-            </div>
-          */}
+      <NavMenu currentPage={currentPage} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/langleraningplatform' element={<Home />} />

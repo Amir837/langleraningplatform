@@ -1,0 +1,177 @@
+.ContactPage {
+    --blue1: orange;
+    --blue2: orange;
+    --blue3: orange;
+    --blue4: rgb(200, 230, 255);
+    --blue5: rgb(220, 240, 255);
+    --red1: rgb(220, 0, 0);
+    --green1: rgb(76, 185, 104);
+    --black1: black;
+
+    --button-color: var(--green1);
+    --pointer-color: var(--blue2); 
+    display: flex;
+    background-color: rgb(255, 252, 245);
+}
+
+button {
+    text-shadow: none;
+}
+
+.feedback-form-box {
+    background-color: #fffcf5;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8d8d8d;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    justify-content: center;
+}
+
+.feedback-form {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.feedback-form .local-feedback {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.feedback-form .part {
+    margin-bottom: 15px;
+}
+
+.feedback-form .part1 {
+    border-bottom: 3px solid rgb(220, 220, 220);
+    margin-bottom: 15px;
+}
+
+.feedback-form .part1 .part1-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.feedback-form .emoji-box {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.feedback-form .emoji-box .emoji-button {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+
+    border: none;
+
+    border-radius: 15px;
+    padding: 5px;
+    padding-top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+
+    cursor: pointer;
+
+    transition: 
+        background-color 0.05s, 
+        border 0.1s;
+}
+
+.feedback-form .emoji-box .emoji-button:hover {
+    border: 3px solid var(--blue1);
+}
+
+.feedback-form .emoji-box .emoji-button-notPressed {
+    border: 1px solid var(--blue1); 
+}
+
+.feedback-form .emoji-box .emoji-button-pressed { 
+    background-color: var(--blue5);
+    border: 3px solid var(--blue1);
+}
+
+.feedback-form .emoji-box .emoji-button:active {
+    background-color: var(--blue5);
+    border: 3px solid var(--blue1);
+}
+
+.feedback-form textarea {
+    width: 97%;
+
+    height: 150px;
+    resize: none;
+
+    border-radius: 5px;
+    border: 3.15px solid rgb(220, 220, 220);
+}
+
+.feedback-form input { 
+    width: 97%;
+
+    height: 20px;
+    resize: none;
+
+    border-radius: 5px;
+    border: 3.15px solid rgb(220, 220, 220);
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.feedback-form .send-button-box {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-form .send-button {
+    background-color: white;
+    height: 45px;
+    width: 300px;
+
+    color: var(--pointer-color);
+    font-size: 25px;
+    white-space: nowrap;
+
+    border-color: var(--pointer-color);
+    border-radius: 5px;
+    border-style: solid;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s,
+        color 0.15s;
+    
+}
+
+.feedback-form .send-button:hover {
+    background-color: var(--pointer-color);
+    color: white;
+}
+
+.feedback-form .send-button:active {
+    opacity: 0.8;
+}
+
+.feedback-form .github-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+
+    margin-top: 10px;
+}
+
+.feedback-form .github-box .github-FlashChess { 
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
