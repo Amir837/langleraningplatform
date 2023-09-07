@@ -78,6 +78,11 @@ function TenseChat() {
     }
 
     const translateSelected = (selectedText: string) => {
+        if (selectedText === "") {
+            console.log("No text selected");
+            return;
+        }
+
         fetch(`https://translateincontextazfunction.azurewebsites.net/api/translateincontext?context=${sentence}&selectedText=${selectedText}`)
         .then(res => res.json())
         .then(data => {
@@ -102,9 +107,9 @@ function TenseChat() {
                 </div>
 
                 <div className="messageHistory">
-                    {messages.map((message) => {
+                    {messages.map((message, index) => {
                         return (
-                            <div className={"messageBox " + message.className}>
+                            <div key={index} className={"messageBox " + message.className}>
                                 <div className="message">
                                     {message.text}
                                 </div>
