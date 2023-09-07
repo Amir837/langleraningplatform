@@ -19,6 +19,18 @@ function TenseChat() {
     const [toTense, setToTense] = useState<EnglishTenses>(EnglishTenses.PstSim);
     const [inputValue, setInputValue] = useState("");
     const [messages, setMessages] = useState<Message[]>([]);
+    const [autoScroll, setAutoScroll] = useState(0);
+
+    // Autoscroll
+    useEffect(() => {
+        if (autoScroll < messages.length) {
+            const container: HTMLElement | null = document.getElementById("message");
+            if (container) {
+                container.scrollTop = container.scrollHeight;
+            }
+        }
+        setAutoScroll(messages.length);
+    })
 
     // Tenses
     const handleFromTenseChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -102,15 +114,17 @@ function TenseChat() {
                 </div>
 
                 <div className="messageHistory">
-                    {messages.map((message) => {
-                        return (
-                            <div className={"messageBox " + message.className}>
-                                <div className="message">
-                                    {message.text}
+                    <div className="chatBox" id="message">
+                        {messages.map((message) => {
+                            return (
+                                <div className={"messageBox " + message.className}>
+                                    <div className="message">
+                                        {message.text}
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
 
                 <div className="userInput">
