@@ -112,6 +112,7 @@ a {
     height: 150px;
     resize: none;
 
+    padding: 5px;
     font-size: 15px;
 
     border-radius: 5px;
@@ -124,6 +125,7 @@ a {
     height: 40px;
     resize: none;
 
+    padding: 5px;
     font-size: 15px;
 
     border-radius: 5px;
