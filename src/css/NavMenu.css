@@ -1,5 +1,12 @@
 /* Navigation element */
+.navMenuHide {
 
+}
+@media (max-width: 1600px) {
+    .leftBar {
+        display: none;
+    }
+}
 /* Left Bar */
 .leftBar {
     position: absolute;
