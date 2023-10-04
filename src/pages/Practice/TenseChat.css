@@ -12,8 +12,9 @@ button {
 
 /* TenseChat */
 .tenseChatPage {
-    margin-left: 10%;
-    width: 90%;
+    position: absolute; 
+    right: 0;
+    width: calc(100% - 260px);
     height: 100%;
     min-height: 100vh;
 

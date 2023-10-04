@@ -22,16 +22,16 @@ function NavMenu(props: NavMenuProps) {
                 <div className="menuBar">
                     <ul className="menuUl">
                     <li className={`menuUl-item ${props.currentPage === "Home" ? "menuUl-active-link" : "menuUl-active-item"}`}>
-                        <Link className="menuUl-link temp-size" to="/">Home</Link>
+                        <Link className="menuUl-link temp-size" to="/">Home <span className="temp-notImplemented">(Not Implemented)</span></Link> { /* Home is not implemented yet */ }
                     </li>
                     <li className={`menuUl-item ${props.currentPage === "Practice" ? "menuUl-active-link" : "menuUl-active-item"}`}>
                         <Link className="menuUl-link temp-size" to="/Practice">Practice</Link>
                     </li>
                     <li className={`menuUl-item ${props.currentPage === "About" ? "menuUl-active-link" : "menuUl-active-item"}`}>
-                        <Link className="menuUl-link temp-size" to="/About">About</Link>
+                        <Link className="menuUl-link temp-size" to="/Practice">About <span className="temp-notImplemented">(Not Implemented)</span></Link> { /* About is not implemented yet */ }
                     </li>
-                    <li className={`menuUl-item ${props.currentPage === "Contact" ? "menuUl-active-link" : "menuUl-active-item"}`}>
-                        <Link className="menuUl-link temp-size" to="/Contact">Contact</Link>
+                    <li className={`menuUl-item ${props.currentPage === "Feedback" ? "menuUl-active-link" : "menuUl-active-item"}`}>
+                        <Link className="menuUl-link temp-size" to="/Feedback">Feedback</Link>
                     </li>
                     </ul>
                 </div>

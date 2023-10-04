@@ -21,19 +21,18 @@ function App() {
 }
 
 function AppContent() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('Practice');
   const location = useLocation();
 
   useEffect(() => {
-    // Определите логику для обновления currentPage в зависимости от текущего пути
     if (location.pathname === '/Practice') {
       setCurrentPage('Practice');
     } else if (location.pathname === '/About') {
-      setCurrentPage('About');
-    } else if (location.pathname === '/Contact') {
-      setCurrentPage('Contact');
+      setCurrentPage('Practice');
+    } else if (location.pathname === '/Feedback') {
+      setCurrentPage('Feedback');
     } else {
-      setCurrentPage('Home');
+      setCurrentPage('Practice');
     }
   }, [location.pathname]);
 
@@ -41,11 +40,10 @@ function AppContent() {
     <div className="App">
       <NavMenu currentPage={currentPage} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/langleraningplatform' element={<Home />} />
-        <Route path="/practice" element={<TenseChat />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<TenseChat />} />
+        <Route path="/Practice" element={<TenseChat />} />
+        <Route path="/About" element={<About />} /> 
+        <Route path="/Feedback" element={<Contact />} />
       </Routes>
     </div>
   );
