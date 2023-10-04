@@ -3,7 +3,7 @@ import './css/App.css';
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
-import { NavMenu } from './NavMenu';
+import { NavMenu } from './NavMenu/NavMenu';
 
 import { TenseChat } from './pages/Practice/TenseChat';
 

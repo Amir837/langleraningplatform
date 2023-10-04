@@ -48,3 +48,9 @@ button {
 .noPadding {
     padding: 0;
 }
+
+@media (max-width: 1600px) { 
+    .App {
+        flex-direction: column;
+    }
+}
