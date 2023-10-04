@@ -40,9 +40,9 @@ function AppContent() {
     <div className="App">
       <NavMenu currentPage={currentPage} />
       <Routes>
-        <Route path="/" element={<TenseChat />} />
+        <Route path="/" element={<TenseChat />} />                { /* Home is not implemented yet */ }
         <Route path="/Practice" element={<TenseChat />} />
-        <Route path="/About" element={<About />} /> 
+        <Route path="/About" element={<TenseChat />} />           { /* About is not implemented yet */ }
         <Route path="/Feedback" element={<Contact />} />
       </Routes>
     </div>
