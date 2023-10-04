@@ -3,7 +3,7 @@
 }
 
 /* Navigation element */
-.navMenuHide {
+.collapsed_navMenu {
 
 }
 
@@ -14,8 +14,9 @@
 }
 /* Left Bar */
 .leftBar {
-    position: absolute;
     width: 260px;
+    min-width: 260px;
+    flex-grow: 0;
     height: 100%;
     min-height: 100vh;
     border-right: 2px solid black;
