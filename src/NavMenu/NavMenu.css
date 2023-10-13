@@ -147,19 +147,36 @@ h1 {
     }
 
     .collapsed_navMenu {
+        padding-left: 20px;
         display: flex;
     }
 
     .menuUl-mobile {
-        display: block;
+        display: flex;
+        flex-direction: column;
+
         justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
         font-size: 40px;
         background-color: white;
 
+        position: relative;
+        z-index: 1;
+
         /* Something like this */ 
-        padding: 10px;
         border: 2px solid rgba(235, 80, 85, 0.15);
-        margin-left: auto;
-        margin-right: auto;
+
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 90%;
+
+    }
+
+    nav {
+        position: relative;
+        padding-left: 0px;
     }
 }

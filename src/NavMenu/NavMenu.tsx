@@ -1,5 +1,5 @@
 /* Navigation menu as a functional component */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './NavMenu.css';
@@ -15,6 +15,10 @@ function NavMenu(props: NavMenuProps) {
     const openMenu = () => {
         setIfopenMenu(!ifopenMenu);
     }
+
+    useEffect(() => {
+        setIfopenMenu(false);
+      }, [props.currentPage]);
 
     var f = "/" + `${props.currentPage}`;
     if (props.currentPage === "Home") f = "/";
